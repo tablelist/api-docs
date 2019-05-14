@@ -1,9 +1,63 @@
 #sidebar {
   position: sticky;
   z-index: 5;
-  width: 315px;
+  width: @sidebar-width;
   height: 100vh;
   top: 0;
   background: @gray-lighter;
   border-right: 1px solid @gray-light;
+
+  .logo {
+    display: block;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  .links {
+    margin: 0;
+    padding: 0 0 0 50px;
+    list-style: none;
+
+    > h1 {
+      display: block;
+      padding: 15px 15px 15px 40px;
+      position: relative;
+      font-size: 18px;
+      margin: 0;
+      cursor: pointer;
+      color: @gray-darker;
+
+      .icon {
+        display: block;
+        font-size: 20px;
+        float: left;
+        position: absolute;
+        top: 12px;
+        left: 15px;
+      }
+    }
+
+    .sub-links {
+      transition: all 0.3s ease-in-out;
+      padding-left: 20px;
+      height: auto;
+
+      &.hidden {
+        height: 0;
+      }
+
+      li {
+        display: block;
+
+        a {
+          display: block;
+          padding: 15px;
+
+          // &:hover {
+          //   background: @gray-light;
+          // }
+        }
+      }
+    }
+  }
 }

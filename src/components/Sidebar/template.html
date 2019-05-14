@@ -1,2 +1,65 @@
 <div id="sidebar">
+  <a class="logo" href="https://tablelist.com">
+    <img src="https://assets.tablelist.com/www/assets/tablelist_logo_black.png" />
+  </a>
+  <div class="links">
+    <h1>
+      <router-link class="clearfix" :to="{ name : 'Home' }">
+        <i class="icon ion-ios-home"></i> Home
+      </router-link>
+    </h1>
+    <!-- AUTHENTICATION -->
+    <h1 @click.prevent="toggle('auth')">
+      <i class="icon ion-lock-combination"></i> Authentication
+    </h1>
+    <ul class="sub-links" :class="{ 'hidden' : !showAuthLinks }">
+      <li>
+        <router-link class="clearfix" :to="{ name : 'Authentication' }">
+          Overview
+        </router-link>
+      </li>
+    </ul>
+    <!-- CITIES -->
+    <h1 @click.prevent="toggle('cities')">
+      <i class="icon ion-flag"></i> Cities
+    </h1>
+    <ul class="sub-links" :class="{ 'hidden' : !showCityLinks }">
+      <li>
+        <router-link class="clearfix" :to="{ name : 'Cities' }">
+          Overview
+        </router-link>
+      </li>
+      <li>
+        <router-link class="clearfix" :to="{ name : 'Cities' }">
+          List Cities
+        </router-link>
+      </li>
+      <li>
+        <router-link class="clearfix" :to="{ name : 'Cities' }">
+          Get A City By Id
+        </router-link>
+      </li>
+    </ul>
+    <!-- VENUES -->
+    <h1 @click.prevent="toggle('venues')">
+      <i class="icon ion-flag"></i> Venues
+    </h1>
+    <ul class="sub-links" :class="{ 'hidden' : !showVenueLinks }">
+      <li>
+        <router-link class="clearfix" :to="{ name : 'Venues' }">
+          Overview
+        </router-link>
+      </li>
+      <li>
+        <router-link class="clearfix" :to="{ name : 'Venues' }">
+          List Venues By City Id
+        </router-link>
+      </li>
+      <li>
+        <router-link class="clearfix" :to="{ name : 'Venues' }">
+          Get A Venue By Id
+        </router-link>
+      </li>
+    </ul>
+  </div>
 </div>
