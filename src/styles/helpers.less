@@ -1,0 +1,42 @@
+.block {
+  display: block;
+}
+
+.center {
+  text-align: center;
+}
+
+.lowercase {
+  text-transform: lowercase;
+
+  &.upper-case-initial {
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.ellipsize {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.no-user-select {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}

@@ -1,0 +1,44 @@
+body {
+  .gotham;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  .gotham;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+    position: relative;
+    top: 2px;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
