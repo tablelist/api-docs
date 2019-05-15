@@ -1,6 +1,6 @@
 <div id="docs">
   <sidebar></sidebar>
   <div id="content-wrapper">
-    <router-view></router-view>
+    <router-view :key="$route.path"></router-view>
   </div>
 </div>

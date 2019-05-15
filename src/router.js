@@ -1,9 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from 'pages/Home';
-import Authentication from 'pages/Authentication';
-import Cities from 'pages/Cities';
-import Venues from 'pages/Venues';
+import Article from 'pages/Article';
 
 Vue.use(VueRouter);
 
@@ -14,15 +12,23 @@ const routes = [{
 }, {
   name: 'Authentication',
   path: '/authentication',
-  component: Authentication
+  component: Article
 }, {
   name: 'Cities',
   path: '/cities',
-  component: Cities
+  component: Article
+}, {
+  name: 'GetACityById',
+  path: '/cities/get',
+  component: Article
+}, {
+  name: 'ListAllCities',
+  path: '/cities/list',
+  component: Article
 }, {
   name: 'Venues',
   path: '/venues',
-  component: Venues
+  component: Article
 }, {
   path: '*',
   component: Home
