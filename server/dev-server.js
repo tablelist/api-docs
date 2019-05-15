@@ -51,13 +51,13 @@ Object.keys(proxyTable).forEach(function (context) {
   app.use(proxyMiddleware(options.filter || context, options));
 });
 
+routes(app);
+
 app.use(require('connect-history-api-fallback')());
 
 app.use(devMiddleware);
 
 app.use(hotMiddleware);
-
-routes(app);
 
 const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory);
 app.use(staticPath, express.static('./static'));

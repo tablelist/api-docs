@@ -1,31 +1,49 @@
 #sidebar {
-  position: sticky;
+  position: fixed;
   z-index: 5;
   width: @sidebar-width;
-  height: 100vh;
+  height: 100%;
   top: 0;
+  left: 0;
   background: @gray-lighter;
   border-right: 1px solid @gray-light;
+  overflow-y: auto;
+  padding-bottom: 40px;
 
   .logo {
     display: block;
-    padding: 20px;
-    margin-bottom: 40px;
+    padding: 20px 20px 20px 10px;
+    text-align: center;
+
+    img {
+      display: inline-block;
+      height: 45px;
+    }
+
+    .text {
+      .field-labelMD;
+      color: @brand-primary;
+      position: relative;
+      top: 2px;
+    }
   }
 
   .links {
     margin: 0;
-    padding: 0 0 0 50px;
+    padding: 0 0 0 25px;
     list-style: none;
 
     > h1 {
       display: block;
       padding: 15px 15px 15px 40px;
       position: relative;
-      font-size: 18px;
       margin: 0;
       cursor: pointer;
-      color: @gray-darker;
+      .field-labelMD;
+
+      a {
+        .field-labelMD;
+      }
 
       .icon {
         display: block;
@@ -52,7 +70,7 @@
         a {
           display: block;
           padding: 15px;
-
+          .field-labelMD;
           // &:hover {
           //   background: @gray-light;
           // }

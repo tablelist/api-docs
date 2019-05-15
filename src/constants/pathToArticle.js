@@ -1,6 +1,11 @@
 export default {
-  '/authentication': 'src/pages/authentication/md/overview',
-  '/cities': 'src/pages/cities/md/overview',
-  '/cities/get': 'src/pages/cities/md/get',
-  '/cities/list': 'src/pages/cities/md/list'
+  '/authentication': 'src/pages/Authentication/md/overview.md',
+  //CITIES
+  '/cities': 'src/pages/Cities/md/overview.md',
+  '/cities/get': 'src/pages/Cities/md/get.md',
+  '/cities/list': 'src/pages/Cities/md/list.md',
+  //VENUES
+  '/venues': 'src/pages/Venues/md/overview.md',
+  '/venues/get': 'src/pages/Venues/md/get.md',
+  '/venues/list': 'src/pages/Venues/md/list.md'
 };

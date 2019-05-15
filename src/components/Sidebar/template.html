@@ -1,13 +1,12 @@
 <div id="sidebar">
   <a class="logo" href="https://tablelist.com">
-    <img src="https://assets.tablelist.com/www/assets/tablelist_logo_black.png" />
+    <img src="https://assets.tablelist.com/www-2/tablelist/tl-logo-black.png" />
+    <span class="text">API</span>
   </a>
   <div class="links">
-    <h1>
-      <router-link class="clearfix" :to="{ name : 'Home' }">
-        <i class="icon ion-ios-home"></i> Home
-      </router-link>
-    </h1>
+    <router-link tag="h1" class="clearfix" :to="{ name : 'Home' }">
+      <i class="icon ion-ios-home"></i> Home
+    </router-link>
     <!-- AUTHENTICATION -->
     <h1 @click.prevent="toggle('auth')">
       <i class="icon ion-lock-combination"></i> Authentication
